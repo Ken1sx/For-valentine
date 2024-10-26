@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+text-align: center;
+vertical-align: middle;
+margin-top: 20%;
+}
+#nobutton {
+position: absolute;
+}
+</style>
+</head>
+<body>
+<div>
+<h1>Will you be my valentine?</h1>
+<button id="yesbutton">Yes</button>
+<button id="nobutton">No</button>
+</div>
+<script>
+document.getElementById("yesbutton").addEventListener("click", showAlert);
+function showAlert() {
+alert("Alr I will be waiting <3");
+}
+var noButton = document.getElementById("nobutton");
+noButton.addEventListener("mouseover", moveButton);
+function moveButton() {
+var x = Math.floor(Math.random() * window.innerWidth);
+var y = Math.floor(Math.random() * window.innerHeight);
+noButton.style.left = x + "px";
+noButton.style.top = y + "px";
+}
+</script>
+</body>
+</html>
